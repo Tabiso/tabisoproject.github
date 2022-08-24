@@ -74,10 +74,120 @@ body{
     }
 
 .home-section.active,
-.project-section.active,
 .about-section.active,
 .contact-section.active{
         position: relative;
         opacity: 1;
         z-index: 8;
+    }
+    /* about-section */
+    .about-section{
+        width: 100%;
+        min-height: 100vh;
+        padding: 150px 100px 0;
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        transition: 1s;
+    }
+    .about{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 65%;
+        gap: 40px;
+    }
+    .about-img-container{
+        position: relative;
+    }
+    .about-info{
+        color: #fff;
+        opacity: 0.6;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
+    .about-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .download-cv-btn{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: .5s;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .download-cv-btn:hover{
+        background: #000;
+    }
+    .contact-section{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: 1s;
+        padding: 100px 150px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    
+    .contact-form input, .contact-form textarea{
+        width: 100%;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid #fff;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        color: #fff;
+        padding: 5px 10px;
+    }
+    
+    ::placeholder{
+        color: #fff;
+    }
+    
+    #msg{
+        height: 280px;
+        resize: none;
+        font-family: sans-serif;
+    }
+    
+    .form-submit-btn{
+        background: #ff4f4f;
+        color: #fff;
+        text-transform: capitalize;
+        padding: 15px 40px;
+        display: block;
+        margin: auto;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .map{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border: 2px solid #fff;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+    
+    .map iframe{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
     }
